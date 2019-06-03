@@ -32,22 +32,30 @@
 <html>
 	<head>
         <title>Transfer Credits</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:900'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+        <link rel="stylesheet" href="css/transfer.css">
     </head>
 
     <body>
         <a href="index.php">&lt; Back</a>
         <br><br>
-        Hello <?php echo $row['name'] ?>,
+        <h1 id="hello">Hello <u><?php echo $row['name'] ?></u>,</h1>
         <br>
-        Your credits are: <?php echo $row['credit'] ?>
+        <h1 id="credits">Your credits are: <?php echo $row['credit'] ?></h1>
         <br><br>
-
+        <br><br>        
+    <div id="forms">
         <form action="#" method="post">
+        
             <fieldset>
-                <legend>Transfer details</legend>
+            <br>
+                <legend><u><strong>Transfer details</strong></u></legend>
                 Credits: <input type="number" name="credits_tr" min =0 value=1 required>
                 <br><br>
                 Transfer to: <select name="to_user" required>
+                    <option selected>Select user</option>
                     <option value =""></option>
 
                 <?php
@@ -62,5 +70,6 @@
             <br>
             <input type="submit" name="transfer" value="Transfer">
         </form>
+        </div>
     </body>
 </html>
