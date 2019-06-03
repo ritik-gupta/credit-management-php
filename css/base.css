@@ -1,0 +1,94 @@
+a{
+    color: #ffffff;
+}
+
+table {
+    margin-top: 350px;
+    width: 100%;
+    border-collapse: collapse;
+    background: #34495e;
+    color: #f3f3f3;
+}
+
+td,
+th {
+    padding: 8px;
+    text-align: left;
+}
+
+
+/* Zebra striping */
+
+tr:nth-of-type(odd) {
+    background: #16a085;
+}
+
+th {
+    background: #2c3e50;
+    font-weight: bold;
+}
+
+h1{
+    text-decoration: none;
+    color: #fff;
+}
+
+.main {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-heading {
+    margin-top: -100px;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.main-heading-primary {
+    display: block;
+    font-size: 5.0rem;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: moveInLeft 1s ease-out;
+}
+
+.main-heading-secondary {
+    font-family: sans-serif;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 31px;
+    color: hotpink;
+    animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
